@@ -1,0 +1,29 @@
+{
+  "name": "devops-handbook",
+  "version": "1.0.0",
+  "description": "运维工程师实战手册",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "bash scripts/deploy.sh"
+  },
+  "dependencies": {
+    "vuepress": "^1.9.7",
+    "@vuepress/plugin-back-to-top": "^1.9.7",
+    "@vuepress/plugin-medium-zoom": "^1.9.7",
+    "@vuepress/plugin-nprogress": "^1.9.7",
+    "@vuepress/plugin-search": "^1.9.7",
+    "vuepress-plugin-seo": "^0.2.0",
+    "vuepress-plugin-sitemap": "^2.3.1",
+    "markdown-it-emoji": "^2.0.2",
+    "markdown-it-task-lists": "^2.1.1",
+    "@vssue/vuepress-plugin-vssue": "^1.4.8",
+    "@vssue/api-github-v3": "^1.4.7"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.9.7"
+  },
+  "author": "",
+  "license": "MIT"
+} 
