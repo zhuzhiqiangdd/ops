@@ -1,0 +1,22 @@
+{
+  "name": "handbook_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "docs:dev": "./node_modules/.bin/vuepress dev .",
+    "docs:build": "./node_modules/.bin/vuepress build ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.9.10",
+    "@vuepress/plugin-medium-zoom": "^1.9.10",
+    "@vuepress/plugin-nprogress": "^1.9.10",
+    "@vuepress/plugin-search": "^1.9.10",
+    "vuepress": "^1.9.10"
+  }
+}
