@@ -1,42 +1,46 @@
 module.exports = {
-  title: '运维工程师实战手册',
-  description: '系统全面的Linux运维工程师学习指南和最佳实践',
+  title: '运维知识库 项目文档', // Updated title
+  description: '《运维工程师实战手册》知识库的项目级文档，包含规划、贡献指南和技术说明。', // Updated description
   head: [
-    ['meta', { name: 'keywords', content: 'Linux运维,系统管理,网络服务,存储系统,虚拟化技术,运维工程师,技术文档' }],
-    ['meta', { name: 'description', content: '运维工程师实战手册是一个全面的Linux运维技术学习平台,涵盖基础设施、系统管理、网络服务、存储系统等核心内容' }],
-    ['meta', { name: 'robots', content: 'index,follow' }],
-    ['meta', { name: 'googlebot', content: 'index,follow' }],
+    // Meta tags can be kept or adjusted as needed. For project docs, detailed SEO might be less critical.
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }] // Assuming favicon is still relevant
   ],
   themeConfig: {
-    logo: '/logo.png',
+    logo: '/logo.png', // Can be kept or changed
     nav: [
-      { text: '基础设施', link: '/01_基础设施/' },
-      { text: '系统管理', link: '/02_系统管理/' },
-      { text: '网络服务', link: '/03_网络服务/' },
-      { text: '存储系统', link: '/04_存储系统/' },
-      { text: '最佳实践', link: '/05_最佳实践/' },
-      { text: '常见问题', link: '/06_常见问题/' }
+      { text: '首页', link: '/' },
+      { text: '项目规划', link: '/PROJECT_PLAN.html' },
+      // { text: '贡献指南', link: '/CONTRIBUTING.html' }, // Placeholder for when CONTRIBUTING.md is created
+      // { text: '技术文档', link: '/TECHNICAL_DOCS/' }, // Placeholder for when TECHNICAL_DOCS are created
     ],
-    sidebar: {
-      '/01_基础设施/': [
-        {
-          title: 'Linux系统管理',
-          collapsable: false,
-          children: [
-            '/01_基础设施/01_Linux基础/',
-            '/01_基础设施/02_系统管理/',
-            '/01_基础设施/03_网络配置/',
-            '/01_基础设施/04_存储管理/',
-            '/01_基础设施/05_安全加固/'
-          ]
-        }
-      ]
-    },
+    sidebar: [
+      {
+        title: '项目概览',
+        collapsable: false,
+        children: [
+          '/', // Link to docs/README.md
+          '/PROJECT_PLAN.md',
+        ]
+      },
+      // {
+      //   title: '贡献指南',
+      //   collapsable: false,
+      //   children: [
+      //     // '/CONTRIBUTING.md', // Placeholder
+      //   ]
+      // },
+      // {
+      //   title: '技术文档',
+      //   collapsable: false,
+      //   children: [
+      //     // '/TECHNICAL_DOCS/ARCHITECTURE.md', // Placeholder
+      //   ]
+      // }
+    ],
     lastUpdated: '上次更新',
-    repo: 'your-repo-url',
-    docsDir: 'docs',
+    // repo: 'your-repo-url', // Update if this site has a different repo or if not needed
+    docsDir: 'docs', // This remains 'docs' as it's the source for this VuePress site
     editLinks: true,
     editLinkText: '在 GitHub 上编辑此页',
     smoothScroll: true
@@ -45,24 +49,22 @@ module.exports = {
     ['@vuepress/search', {
       searchMaxSuggestions: 10
     }],
-    ['@vuepress/google-analytics', {
-      'ga': 'UA-XXXXX-Y'
-    }],
+    // ['@vuepress/google-analytics', { 'ga': 'UA-XXXXX-Y' }], // May not be needed for project docs
     ['@vuepress/medium-zoom'],
     ['@vuepress/back-to-top'],
     ['@vuepress/nprogress'],
-    ['sitemap', {
-      hostname: 'https://your-domain.com'
-    }],
-    ['seo'],
-    ['@vssue/vuepress-plugin-vssue', {
-      platform: 'github',
-      owner: 'your-username',
-      repo: 'your-repo-name',
-      clientId: 'YOUR_CLIENT_ID',
-      clientSecret: 'YOUR_CLIENT_SECRET',
-      autoCreateIssue: true
-    }]
+    // Vssue (comments) might not be needed for internal project docs, can be removed if desired
+    // ['@vssue/vuepress-plugin-vssue', {
+    //   platform: 'github',
+    //   owner: 'your-username',
+    //   repo: 'your-repo-name',
+    //   clientId: 'YOUR_CLIENT_ID',
+    //   clientSecret: 'YOUR_CLIENT_SECRET',
+    //   autoCreateIssue: true
+    // }],
+    // Sitemap and SEO might be less critical for project docs, can be removed if desired
+    // ['sitemap', { hostname: 'https://your-domain.com' }],
+    // ['seo'],
   ],
   markdown: {
     lineNumbers: true,
@@ -75,8 +77,8 @@ module.exports = {
   configureWebpack: {
     resolve: {
       alias: {
-        '@assets': 'path/to/assets'
+        // '@assets': 'path/to/assets' // Update or remove if not used
       }
     }
   }
-} 
+}
